@@ -13,13 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
     yesBtn.addEventListener("click", () => {
         document.getElementById("audio").play();
         container.innerHTML = `<h1>I knew you did, text me hii on insta!
-                  <a href='https://semant.localplayer.dev/insta' class="❤">❤</a>
+                  <a href='/insta' class="❤">❤</a>
                 </h1>
                 <img src='./assets/rosecat.png' alt="Rose Cat"/>`;
         container.style.top = "-10%";
         let heartLink = document.createElement("span");
         heartLink.className = "heart";
         heartLink.textContent = "❤️";
+        heartLink.href = "/insta";
         container.appendChild(heartLink);
         setTimeout(() => {
             let heartStyle = heartLink.style;
