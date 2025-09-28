@@ -1,135 +1,166 @@
+* {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
 
-      * {
-        font-family: Arial, sans-serif;
-        font-weight: 700;
-      }
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #cdc5ff;
-        margin: 0;
-        position: relative;
-      }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #cdc5ff;
+  margin: 0;
+  position: relative;
+}
 
-      main {
-        position: relative;
-        text-align: center;
-        width: 300px;
-        height: 200px;
-      }
+main {
+  position: relative;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+}
 
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        margin: 10px;
-        cursor: pointer;
-        position: absolute;
-        border-radius: 5px;
-        border-color: black;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
-      }
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 5px;
+  border-color: black;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
 
-      #yesBtn {
-        left: 50px;
-        top: 80px;
-        color: #da2430;
-        transition: background-color 0.3s ease;
-      }
+#yesBtn {
+  left: 50px;
+  top: 80px;
+  color: #da2430;
+  transition: background-color 0.3s ease;
+}
 
-      #noBtn {
-        left: 170px;
-        top: 80px;
-        cursor: default;
-      }
+#noBtn {
+  left: 170px;
+  top: 80px;
+  cursor: default;
+}
 
-      #yesBtn:hover {
-        color: white;
-        background-color: #da2430;
-      }
+#yesBtn:hover {
+  color: white;
+  background-color: #da2430;
+}
 
-      #yesBtn::before,
-      #yesBtn::after {
-        content: "❤";
-        position: absolute;
-        font-size: 2rem;
-        color: rgba(255, 0, 0, 0.4);
-        pointer-events: none;
-        text-shadow: none;
-      }
+#yesBtn::before,
+#yesBtn::after {
+  content: "❤";
+  position: absolute;
+  font-size: 2rem;
+  color: rgba(255, 0, 0, 0.4);
+  pointer-events: none;
+  text-shadow: none;
+}
 
-      #yesBtn::before {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        animation: pulse 2s infinite;
-      }
+#yesBtn::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+}
 
-      #yesBtn::after {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: rgba(255, 0, 0, 0.6);
-        animation: hearts 2s infinite;
-      }
-      img {
-        width: 100%;
-        border-radius: 10px;
-      }
-      .heart {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 20rem;
-        animation: hearts 2.5s;
-        opacity: 0;
-        color: rgba(255, 0, 0, 0.6);
-      }
+#yesBtn::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 0, 0, 0.6);
+  animation: hearts 2s infinite;
+}
 
-      footer {
-        position: absolute;
-        bottom: 5%;
-      }
+img {
+  width: 100%;
+  margin-top: 4%;
+  border-radius: 10px;
+}
 
-      .❤ {
-        color: rgba(255, 0, 0, 0.6);
-        text-decoration: none;
-        animation: pulse 2s infinite;
-      }
+.heart {
+  text-decoration: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20rem;
+  animation: hearts 2.5s;
+  opacity: 0;
+  color: rgba(255, 0, 0, 0.6);
+}
 
-      p,
-      h1 {
-        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.169);
-        font-size: 16px;
-        position: relative;
-      }
+footer {
+  position: absolute;
+  bottom: 5%;
+}
 
-      @keyframes pulse {
-        0% {
-          transform: translate(-50%, -50%) scale(1);
-          opacity: 1;
-        }
-        50% {
-          transform: translate(-50%, -50%) scale(1.5);
-          opacity: 0.5;
-        }
-        100% {
-          transform: translate(-50%, -50%) scale(1);
-          opacity: 1;
-        }
-      }
+.❤ {
+  color: rgba(255, 0, 0, 0.6);
+  text-decoration: none;
+  animation: pulse 2s infinite;
+}
 
-      @keyframes hearts {
-        0% {
-          transform: translate(-50%, -50%) scale(0) translateY(0);
-          opacity: 1;
-        }
-        100% {
-          transform: translate(-50%, -50%) scale(1) translateY(-80px);
-          opacity: 0;
-        }
-      }
+p,
+h1 {
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.169);
+  font-size: 16px;
+  position: relative;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hearts {
+  0% {
+    transform: translate(-50%, -50%) scale(0) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+
+  25% {
+    transform: translate(-10px, 0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translate(10px, 0) rotate(5deg);
+  }
+
+  75% {
+    transform: translate(-5px, 0) rotate(-3deg);
+  }
+}
+
+.no-escape {
+  animation: wiggle 0.4s ease;
+}
